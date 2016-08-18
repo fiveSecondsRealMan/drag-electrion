@@ -28,6 +28,9 @@ module.exports = {
         1 - 警告
         2 - 错误
       */
+      "react/jsx-uses-react": 1,
+      "react/jsx-uses-vars": 1,
+      "react/react-in-jsx-scope": 1,
       "no-console": 0,                        // 使用console 不检查
       "no-sequences": 0,                      // 结尾使用逗号 不检查
       "no-empty": 1,                          // 空代码块 警告

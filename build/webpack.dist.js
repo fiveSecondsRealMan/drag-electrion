@@ -9,18 +9,17 @@ import webpackConfig from './webpack.config';
 
 let distWebpackConfig = Object.assign({}, webpackConfig);
 distWebpackConfig.output.filename = 'bundle.js';
+distWebpackConfig.externals = { react: 'window.React' };
 
 distWebpackConfig.plugins.push(
-  new webpack.optimize.NoErrorsPlugin()
+  new webpack.NoErrorsPlugin()
 );
 distWebpackConfig.plugins.push(
   new webpack.optimize.UglifyJsPlugin({
     compress: {
-      warning: true
+      warnings: true
     }
   })
 );
 
-webpack(distWebpackConfig, { p: true }, (err, stat) => {
-  console.log(err);
-});
+webpack(distWebpackConfig, (error, stats) => console.log('' + stats));

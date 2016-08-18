@@ -57,7 +57,11 @@ devWebpackConfig
 devWebpackConfig.eslint = { configFile: '../.eslintrc.js' };
 
 (new WebpackDevServer(
-  webpack(devWebpackConfig)
+  webpack(devWebpackConfig), {
+    stats: {
+      colors: true
+    }
+  }
 )).listen(port, host, () => {
   console.log('server is runing');
 });
