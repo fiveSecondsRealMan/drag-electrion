@@ -43,9 +43,24 @@ Object.assign(resAlias, {
   reducers: path.join(__DEVPATH__, 'reducers')
 });
 
-// reducers
+// store
 Object.assign(resAlias, {
   store: path.join(__DEVPATH__, 'store')
+});
+
+// images
+Object.assign(resAlias, {
+  images: path.join(__DEVPATH__, 'pages', 'images')
+});
+
+// css
+Object.assign(resAlias, {
+  styles: path.join(__DEVPATH__, 'pages', 'styles')
+});
+
+// messages
+Object.assign(resAlias, {
+  messages: path.join(__DEVPATH__, 'messages')
 });
 
 /**
@@ -66,6 +81,8 @@ module.exports = {
     path: __DISTPATH__,
     chunkFilename: '[id].[chunkhash].js'
   },
+
+  target: 'electron',
 
   resolve: {
     alias: resAlias,
