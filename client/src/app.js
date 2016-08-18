@@ -12,12 +12,14 @@ import Main from 'components';
 import { bindActionCreators } from 'redux';
 import { ipcRenderer as ipc } from 'electron';
 
+let mocking = false;
+let initialState = {};
 const myStore = store();
 
 class App extends React.Component {
   render() {
     return (
-      <Main state={ myStore.getState() }  { ...dispatchToProps() } />
+      <Main state={ mocking ? initialState : mockingmyStore.getState() }  { ...dispatchToProps() } />
     );
   }
 }
@@ -29,6 +31,7 @@ const render = () => {
 const dispatchToProps = () => bindActionCreators(action, myStore.dispatch);
 
 ipc.on('stateUpdate', (error, data) => {
+  mocking = true;
   initialState = data;
   render();
 });
