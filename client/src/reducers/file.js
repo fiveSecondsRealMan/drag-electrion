@@ -1,10 +1,13 @@
 'use strict';
 
 import {
-  GET_ALL_FILE,
+  GET_ALL_FILE
+} from 'constants/dataActionTypes';
+
+import {
   DRAG_SINGLE_FILE,
   DRAG_FOLDER
-} from 'constants/actionTypes';
+} from 'constants/interactiveActionTypes';
 
 export default (state = {}, action) => {
   switch (action.type) {
@@ -15,6 +18,6 @@ export default (state = {}, action) => {
     case DRAG_FOLDER:
       return Object.assign({}, state, { draged: action.draged });
     default:
-      return state;  
+      return state;
   }
 }

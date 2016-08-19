@@ -6,7 +6,7 @@
 
 const path = require('path');
 const electron = require('electron');
-const eventListener = require('./eventListener');
+const message = require('./message');
 
 // 定义
 // 控制生命周期模块 app
@@ -44,9 +44,9 @@ function createWindow () {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+
+  // 监听渲染线程事件
+  message(ipcMain, mainWindow);
 }
 
 app.on('ready', createWindow);
-
-// 监听渲染线程事件
-eventListener(ipcMain);
