@@ -6,7 +6,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import store from 'store';
+import createStore from 'store';
 import Main from 'components';
 import { bindActionCreators } from 'redux';
 import { ipcRenderer as ipc } from 'electron';

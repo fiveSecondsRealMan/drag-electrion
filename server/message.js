@@ -4,8 +4,36 @@
 
 'use strict';
 
-module.exports = function (ipcMain, mainWindow) {
-  ipcMain.on('getAllFiles', (event, data) => {
-    mainWindow.webContents.send('getAllFiles', data);
+var request = require('request');
+
+const host = '192.168.5.140';
+const url = 'http://' + host + '/files';
+const userType = 'JWT';
+const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiNzdjNmFiZTQtZjdjZC00NmIzLTgwYzctZmYwOGFhMzc3NDJlIn0.EE2KG9quGAK0Db-P60ok3Pq-Q_btAyfXl018vIloYAk';
+
+const getAllFiles = () => {
+  const options = {
+    method: 'GET',
+    url: url,
+    headers: {
+      Authorization: userType + ' ' + token
+    }
+  };
+
+  return new Promise((resolve, reject) => {
+    request(options, (err, res, body) => {
+      if (err)
+        return reject(err);
+
+      resolve(JSON.parse(body));
+    });
+  });
+};
+
+module.exports = function (ipcMain) {
+  ipcMain.on('getAllFiles', event => {
+    getAllFiles()
+      .then(data => event.sender.send('getAllFiles', data))
+      .catch(err => event.sender.send('getAllFiles', err));
   });
 };

@@ -8,7 +8,6 @@ export default (ipc, action) => {
   ipc.on('getAllFiles', (error, data) => {
     // 获取所有文件
     action.getAllFile(data);
-    console.log(data);
   });
-  ipc.send("getAllFiles", 'wjjj');
+  ipc.send("getAllFiles");
 }

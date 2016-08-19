@@ -48,6 +48,11 @@ Object.assign(resAlias, {
   store: path.join(__DEVPATH__, 'store')
 });
 
+// messages
+Object.assign(resAlias, {
+  messages: path.join(__DEVPATH__, 'messages')
+});
+
 // images
 Object.assign(resAlias, {
   images: path.join(__DEVPATH__, 'pages', 'images')
@@ -56,11 +61,6 @@ Object.assign(resAlias, {
 // css
 Object.assign(resAlias, {
   styles: path.join(__DEVPATH__, 'pages', 'styles')
-});
-
-// messages
-Object.assign(resAlias, {
-  messages: path.join(__DEVPATH__, 'messages')
 });
 
 /**
@@ -82,12 +82,12 @@ module.exports = {
     chunkFilename: '[id].[chunkhash].js'
   },
 
-  target: 'electron',
-
   resolve: {
     alias: resAlias,
     extensions: ['', '.js', '.jsx', '.css', '.html']
   },
+
+  target: 'electron',
 
   // loader
   module: {

@@ -46,7 +46,7 @@ function createWindow () {
   });
 
   // 监听渲染线程事件
-  message(ipcMain, mainWindow);
+  message(ipcMain);
 }
 
 app.on('ready', createWindow);
