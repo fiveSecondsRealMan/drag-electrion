@@ -6,7 +6,7 @@
 
 import * as dataActionTypes from 'constants/dataActionTypes';
 
-export const getAllFile = (file) => ({
+export const getAllFile = (files) => ({
   type: dataActionTypes.GET_ALL_FILE,
-  file
+  files
 })

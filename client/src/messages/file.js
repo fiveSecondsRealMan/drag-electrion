@@ -1,5 +1,6 @@
 /**
   接收和发送给electron桌面程序 file 消息
+  action -> dispatch -> reducer -> state
 **/
 
 'use strict';

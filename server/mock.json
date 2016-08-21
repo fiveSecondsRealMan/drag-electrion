@@ -1,0 +1,30 @@
+[
+    {
+      "uuid": "aa123456",
+      "type": "file",
+      "attributes": {
+        "name": "挖掘机就是你.txt",
+        "ext": "txt",
+        "size": 33133,
+        "ctime": "2016-08-07 10:04"
+      }
+    },
+    {
+      "uuid": "bb123456",
+      "type": "file",
+      "attributes": {
+        "name": "哈哈哈.txt",
+        "ext": "txt",
+        "size": 3300,
+        "ctime": "2016-08-08 09:30"
+      }
+    },
+    {
+      "uuid": "aa123456",
+      "type": "folder",
+      "attributes": {
+        "name": "aaaa",
+        "ctime": "2016-08-10 18:03"
+      }
+    }
+]

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.checkbox {
+  display: inline-block;
+  width: 32px;
+  height: 38px;
+  background: url("../images/checkboxIcon.png") no-repeat 9px 9px;
+}
+
+.fileicon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/folderIcon.png");
+  background-repeat: no-repeat;
+}
+
+.folder-fileicon {
+  background-position: 0 -30px;
+}
+
+.text-fileicon {
+  background-position: -120px 0;
+}

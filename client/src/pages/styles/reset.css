@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+
+ul, ol, li { list-style: none; }
+
+a { text-decoration: none; }
+
+button, input, select, textarea { border: none; outline: none; }
+
+img { border: 0; }
+
+.clearfix { display: block; }
+.clearfix:after { display: block; clear: both; content: ""; font-size: 0; height: 0; visibility: hidden; }
+
+.fl { float: left; }
+.fr { float: right; }
+
+body { font-size: 12px; font-family: "微软雅黑", Microsoft YaHei, Arial, Lucida, Verdana, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, SimSun, sans-serif; }

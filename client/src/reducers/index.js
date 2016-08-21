@@ -1,6 +1,6 @@
 'use strict';
 
 import { combineReducers } from 'redux';
-import file from './file';
+import files from './file';
 
-export default combineReducers({ file });
+export default combineReducers({ files });

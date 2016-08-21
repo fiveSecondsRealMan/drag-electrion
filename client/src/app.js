@@ -6,14 +6,26 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createStore from 'store';
-import Main from 'components';
 import { bindActionCreators } from 'redux';
 import { ipcRenderer as ipc } from 'electron';
+
+// require css
+import 'styles/reset';
+import 'styles/component';
+
+// 创建redux store
+import createStore from 'store';
+
+// 交互 action
 import * as interactiveAction from 'action/interactive';
+
+// 监听electron消息
 import message from 'messages';
 
-const myStore = store();
+// 组件入口
+import Main from 'components';
+
+const myStore = createStore();
 const combineInteractiveActionAndDispatch = bindActionCreators(interactiveAction, myStore.dispatch);
 
 class App extends React.Component {

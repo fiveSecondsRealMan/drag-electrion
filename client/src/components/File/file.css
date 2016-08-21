@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.file {
+  width: 100%;
+}
+
+.file-item {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  height: 38px;
+  line-height: 38px;
+  border-bottom: 1px solid #ebebeb;
+  background: #fff;
+}
+
+.file-item:hover {
+  background: #f0f8fd;
+}
+
+.file-item div {
+  -webkit-box-align: center;
+}
+
+.file-item div:first-child {
+  -webkit-box-flex: 6;
+}
+
+.file-item div:nth-child(even),
+.file-item div:last-child {
+  -webkit-box-flex: 2;
+}
+
+.file-item .filename,
+.file-item .filesize,
+.file-item .filectime {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 60px;
+}
