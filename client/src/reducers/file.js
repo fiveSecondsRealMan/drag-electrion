@@ -12,8 +12,7 @@ import {
 export default (state = [], action) => {
   switch (action.type) {
     case GET_ALL_FILE:
-      console.log(Object.assign({}, state, { files: action.files }), 'mddd');
-      return Object.assign({}, state, { files: action.files });
+      return action.files;
     case DRAG_SINGLE_FILE:
       return Object.assign({}, state, { draged: action.draged });
     case DRAG_FOLDER:

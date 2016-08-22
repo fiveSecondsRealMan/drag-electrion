@@ -17,17 +17,22 @@
   background: #f0f8fd;
 }
 
+.file-item .fileicon {
+  vertical-align: top;
+  margin-top: 11px;
+}
+
 .file-item div {
   -webkit-box-align: center;
 }
 
 .file-item div:first-child {
-  -webkit-box-flex: 6;
+  width: 40%;
 }
 
 .file-item div:nth-child(even),
 .file-item div:last-child {
-  -webkit-box-flex: 2;
+  width: 30%;
 }
 
 .file-item .filename,

@@ -10,7 +10,7 @@ export default class File extends React.Component {
 
     return (
       <ul className="file">
-        { files.map(file => <FileItem file={ file } />) }
+        { files.map((file, i) => <FileItem key={ i } file={ file } />) }
       </ul>
     );
   }
